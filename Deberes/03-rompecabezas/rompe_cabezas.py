@@ -43,8 +43,47 @@ def crear_split(arreglo_imagen, tamanio):
     x, y = tamanio
     return np.split(np.concatenate(np.split(arreglo_imagen, y, axis=1)), x*y)
 
-ab = crear_split(imagen, (5,10))
-plt.imshow(ab[49])
+ab = crear_split(imagen, (5,5))
+
+numero_iteracioes = np.random.permutation([0,1,2,3,4])
+num_ite2 = np.random.permutation([5,6,7,8,9])
+num_ite3 = np.random.permutation([10,11,12,13,14])
+num_ite4 = np.random.permutation([15,16,17,18,19])
+num_ite5 = np.random.permutation([20,21,22,23,24])
+
+mezclar = np.concatenate(list(map(lambda i: ab[i], numero_iteracioes)))
+mez2 = np.concatenate(list(map(lambda i: ab[i], num_ite2)))
+mez3 = np.concatenate(list(map(lambda i: ab[i], num_ite3)))
+mez4 = np.concatenate(list(map(lambda i: ab[i], num_ite4)))
+mez5 = np.concatenate(list(map(lambda i: ab[i], num_ite5)))
+
+plt.imshow(mezclar)
+plt.show
+plt.imshow(mez2)
+plt.show
+plt.imshow(mez3)
+plt.show
+plt.imshow(mez4)
+plt.show
+plt.imshow(mez5)
+plt.show
+
+numero_ite3[0]=4
+numero_ite3[1]=0
+mezclar = np.concatenate(list(map(lambda i: ab[i], numero_iteracioes)))
 
 
-# funcion intercambiar posiciones arreglo 
+
+ss = np.concatenate((mezclar, mez2, mez3, mez4, mez5), axis=1)
+
+plt.imshow(ss)
+plt.imshow(imagen)
+
+
+
+piezas_index = np.random.permutation(int(50))
+mapache_random = np.concatenate(list(map(ab,piezas_index)))
+
+
+plt.imshow(vv)
+plt.show
