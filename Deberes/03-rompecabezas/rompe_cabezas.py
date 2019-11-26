@@ -82,27 +82,41 @@ def listar_posiciones_por_columna(columna):
         return num_ite5
     
 
-def mover_piezas(posicion_inicial, posicion_final, valor1, valor2):
-    
+def mover_piezas(valor1, valor2):
     if (valor1>=0 and valor2<=4):  
-        num_ite1[int(posicion_inicial)] = int(valor1)
-        num_ite1[int(posicion_final)] = int(valor2)
+        i = list(num_ite1).index(int(valor1))
+        j = list(num_ite1).index(int(valor2))
+        auxiliar = num_ite1[i]
+        num_ite1[i] = num_ite1[j]
+        num_ite1[j] = int(auxiliar)
         mix1 =  np.concatenate(list(map(lambda i: ab[i], num_ite1)))
-    elif (valor1>=5 and valor2<=9):    
-        num_ite2[posicion_inicial] = valor1
-        num_ite2[posicion_final] = valor2
+    elif (valor1>=5 and valor2<=9): 
+        i = list(num_ite2).index(int(valor1))
+        j = list(num_ite2).index(int(valor2))
+        auxiliar = num_ite2[i]
+        num_ite2[i] = num_ite2[j]
+        num_ite2[j] = int(auxiliar)
         mix2 =  np.concatenate(list(map(lambda i: ab[i], num_ite2)))
-    elif (valor1>=10 and valor2<=14):    
-        num_ite3[posicion_inicial] = valor1
-        num_ite3[posicion_final] = valor2
+    elif (valor1>=10 and valor2<=14):
+        i = list(num_ite3).index(int(valor1))
+        j = list(num_ite3).index(int(valor2))
+        auxiliar = num_ite3[i]
+        num_ite3[i] = num_ite3[j]
+        num_ite3[j] = int(auxiliar)
         mix3 =  np.concatenate(list(map(lambda i: ab[i], num_ite3)))
     elif (valor1>=15 and valor2<=19):
-        num_ite4[posicion_inicial] = valor1
-        num_ite4[posicion_final] = valor2
+        i = list(num_ite4).index(int(valor1))
+        j = list(num_ite4).index(int(valor2))
+        auxiliar = num_ite4[i]
+        num_ite4[i] = num_ite4[j]
+        num_ite4[j] = int(auxiliar)
         mix4 =  np.concatenate(list(map(lambda i: ab[i], num_ite4)))
     elif (valor1>=20 and valor2<=24):
-        num_ite5[posicion_inicial] = valor1
-        num_ite5[posicion_final] = valor2
+        i = list(num_ite5).index(int(valor1))
+        j = list(num_ite5).index(int(valor2))
+        auxiliar = num_ite5[i]
+        num_ite5[i] = num_ite5[j]
+        num_ite5[j] = int(auxiliar)
         mix5 =  np.concatenate(list(map(lambda i: ab[i], num_ite5)))
     
     # ss = np.concatenate((mix1, mix2, mix3, mix4, mix5), axis=1)
@@ -145,11 +159,9 @@ def menu():
             print(tamanio)
             break
         elif(opcion == 4):
-            posicion_ini = input('Posicion inicial: ')
-            posicion_fin = input('Posicion final: ')
             valor_uno = input('Valor 1 : ')
             valor_dos = input('valor2 ')
-            mover_piezas(int(posicion_ini), int(posicion_fin), int(valor_uno), int(valor_dos))
+            mover_piezas(int(valor_uno), int(valor_dos))
             graficar()
             break
             
