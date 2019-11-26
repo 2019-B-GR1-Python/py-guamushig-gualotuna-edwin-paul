@@ -136,11 +136,19 @@ def graficar():
 
 
 
+
+
+
+# Menuuuuuuuuuu
+
+
+
+
 def menu():
     opcion = None
     while (opcion != 0):
         print("********************************")
-        print("Rompecabezas POLICRUSH")
+        print("Rompecabezas")
         print("Escoge una opcion del menu:")
         print("1) Mostart original\n2) Mostrar rompecabezas\n3) Ver posiciones\n4) Mover\n0) Salir")
         print("*********************************")
