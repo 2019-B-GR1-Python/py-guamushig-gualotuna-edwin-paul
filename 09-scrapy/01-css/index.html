@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+    identificador
+    */
+        #titulo-uno {
+            color: blue;
+        }
+
+        /*
+    Nombre de etiqueta
+    */
+        p {
+            color: white;
+            background-color: black;
+        }
+
+        body {
+            background-color: lightpink;
+        }
+
+        /*
+        Por clase
+        */
+
+        .texto-amarillo {
+            color: yellow;
+        }
+
+        /*
+        Etiqueta dentro de otra
+        */
+        li>p {
+            background-color: coral;
+            color: darkcyan;
+        }
+
+        li > p.texto-amarillo {
+            color: gold;
+        }
+
+        p.texto-azul.texto-amarillo.texto-cafe {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo-uno">
+        Holis
+    </h1>
+
+    <p>Mi mamaaa</p>
+    <p>me conciente</p>
+
+    <p id="titulo-uno" class="texto-amarillo" style="background-color: indigo;">
+        Nadaaaaa
+    </p>
+
+    <ul>
+        <li>
+            <p class="texto-cafe">MUY</p>
+        </li>
+        <li>
+            <p class="texto-azul">BUENOS</p>
+        </li>
+        <li>
+            <p class="texto-amarillo">DIAS</p>
+        </li>
+    </ul>
+
+</body>
+
+</html>
