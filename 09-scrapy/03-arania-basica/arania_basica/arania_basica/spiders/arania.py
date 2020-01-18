@@ -26,8 +26,13 @@ class IntroSpider(scrapy.Spider):
     name = 'introduccion_spider'
 
     urls = [
-        'http://books.toscrape.com/catalogue/category/books/travel_2/index.html'
+       ## 'http://books.toscrape.com/catalogue/category/books/travel_2/index.html'
+       "http://books.toscrape.com/catalogue/category/books_1/page-1.html"
     ]
+
+     ## for u in range(1, 51):
+       ##  print(f"http://books.toscrape.com/catalogue/category/books_1/page-{u}1.html") 
+
     
     def start_requests(self):
         for url in self.urls:
