@@ -3,14 +3,14 @@ from threading import Thread
 from pip._vendor.distlib.compat import raw_input
 
 server_port = 2030
-host = '192.168.1.26'
+host = '172.17.0.1'
 
 
 class enviarMensaje(Thread):
     def __init__(self, sock):
         Thread.__init__(self)
         self.sock = sock
-
+        
     def run(self):
         try:
             usuario = raw_input('Nombre Usuario:')

@@ -1,8 +1,8 @@
 import socket
 from threading import *
 
-server_port = 2030
-IP = '192.168.1.26'
+server_port = 3030
+IP = '172.17.0.1'
 clientes = []
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
